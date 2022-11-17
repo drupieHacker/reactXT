@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Nav from 'react-bootstrap/Nav';
+import Menu from './Menu';
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import Slider from './Slider';
+import Branding from './Branding';
+import Cards from './Cards';
+import Launch from './Launch';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <ThemeProvider
+  breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+  minBreakpoint="xxs"
+>
+ <Menu/>
+<Slider/>
+<Branding
+title="Somos  XT NEGOCIO"
+/>
+<Cards
+/>
+<Launch/>
+</ThemeProvider>
+   </>
   );
 }
 
